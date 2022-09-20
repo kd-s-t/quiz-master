@@ -1,0 +1,14 @@
+#! /bin/bash
+clear >$(tty)
+
+cd `dirname $0`/../
+
+echo "Initializing..."
+go mod init github.com/ollolollollooloo/quiz-master
+go mod download
+go mod vendor
+go mod verify
+
+go run src/database/createTable.go
+go run src/database/migrate.go
+echo "Done!"

@@ -1,0 +1,53 @@
+#! /bin/bash
+clear >$(tty)
+
+cd `dirname $0`/../
+PS3='Please enter the number of your choice: '
+color='\033[0;96m'
+colorEnd='\033[0m'
+
+if [[ "$(uname)" == 'Linux' ]];
+then
+    color='\e[1;36m'
+    colorEnd='\e[0m'
+fi
+
+options[0]="Setup"
+options[1]="Start Quiz"
+options[2]="Quiz CRUD Operation"
+options[3]="Help"
+options[4]="Quit"
+
+cd `dirname $0`/../
+echo -e "${color}
+= = = = = = = = = = = = = = = = = = = = = = = = = =
+            Welcome to Quiz Master
+- - - - - - - - - - - - - - - - - - - - - - - - - -
+"
+select opt in "${options[@]}"
+do
+    case $opt in
+        "${options[0]}")
+            bash bin/setup
+            break
+            ;; 
+        "${options[1]}")
+            bash bin/start_quiz
+            break
+            ;;
+        "${options[2]}")
+            bash bin/quiz_crud
+            break
+            ;;
+        "${options[3]}")
+            bash bin/help
+            break
+            ;;
+        "${options[4]}")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+
+echo -e "${colorEnd}"

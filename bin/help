@@ -1,0 +1,29 @@
+#! /bin/bash
+clear >$(tty)
+
+echo '
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+                Help
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+1) Setup               => Installs packages, Create table and migrate
+2) Start Quiz          => Start answering some questions
+2) Quiz CRUD Operation => Create, Read, Update, Delete questions
+3) Help                => Descriptions of the commands
+4) Quit                => Close the panel
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+'
+PS3='Please enter the number of your choice: '
+api=("Back" "Quit")
+select opt in "${api[@]}"
+do
+    case $opt in
+        "${api[0]}")
+          bash bin/quiz_master
+            break
+            ;;
+        "${api[1]}")
+            break
+            ;;
+        *) echo "Invalid option $REPLY";;
+    esac
+done
