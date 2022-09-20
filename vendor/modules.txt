@@ -1,3 +1,34 @@
+# github.com/alexeyco/simpletable v1.0.0
+## explicit; go 1.16
+github.com/alexeyco/simpletable
+# github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e
+## explicit
+github.com/chzyer/readline
+# github.com/fatih/color v1.13.0
+## explicit; go 1.13
+# github.com/manifoldco/promptui v0.9.0
+## explicit; go 1.12
+github.com/manifoldco/promptui
+github.com/manifoldco/promptui/list
+github.com/manifoldco/promptui/screenbuf
+# github.com/mattn/go-colorable v0.1.9
+## explicit; go 1.13
+# github.com/mattn/go-isatty v0.0.14
+## explicit; go 1.12
+# github.com/mattn/go-runewidth v0.0.13
+## explicit; go 1.9
+github.com/mattn/go-runewidth
 # github.com/mattn/go-sqlite3 v1.14.15
 ## explicit; go 1.16
 github.com/mattn/go-sqlite3
+# github.com/olekukonko/tablewriter v0.0.5
+## explicit; go 1.12
+# github.com/rivo/uniseg v0.4.2
+## explicit; go 1.18
+github.com/rivo/uniseg
+# github.com/rodaine/table v1.0.1
+## explicit; go 1.14
+# golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c
+## explicit; go 1.17
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix

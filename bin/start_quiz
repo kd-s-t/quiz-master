@@ -1,9 +1,10 @@
 #! /bin/bash
 clear >$(tty)
-
+cd `dirname $0`/../
 echo '
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
                 Start Quiz!
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 '
 
+go run src/controllers/start_quiz.go
