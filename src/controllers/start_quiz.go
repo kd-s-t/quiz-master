@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	db, err := go version("sqlite3", "src/database/quiz_master.db")
+	db, err := sql.Open("sqlite3", "src/database/quiz_master.db")
 
 	if err != nil {
 		log.Fatal(err)
